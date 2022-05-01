@@ -35,8 +35,8 @@ function Layout() {
     const [srError, setSrError] = useState("");
     const [smError, setSmError] = useState("");
 
-    const [srStep, setSrStep] = useState("sent");
-    const [smStep, setSmStep] = useState("sent");
+    const [srStep, setSrStep] = useState("");
+    const [smStep, setSmStep] = useState("");
 
     const[showToast, setShowToast] = useState(false);
 
