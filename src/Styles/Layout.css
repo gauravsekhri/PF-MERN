@@ -731,12 +731,20 @@ div.p5leftbox > div > a > svg:hover{
     }
 
     .card-text {
-        min-height: 85px;
+        min-height: 105px;
     }
 
     .part6{
         margin: 10px 10px 10px 10px;
         font-size: 0.9rem;
+    }
+
+    .btnerrRow{
+        margin: 7px 20px 5px 19px;
+    }
+
+    .msgError{
+        font-size: 13px;
     }
 
 }

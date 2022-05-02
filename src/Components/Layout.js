@@ -46,7 +46,7 @@ function Layout() {
             body: "Created a survey builder application using MERN stack. Aim is to build surveys on low cost."
         },
         {
-            title: "Realtime Whatsapp Clone",
+            title: "Whatsapp Clone Realtime",
             body: "Developed the cart app for Whatsapp."
         },
         {
