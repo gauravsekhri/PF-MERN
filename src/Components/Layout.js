@@ -86,7 +86,7 @@ function Layout() {
         }
         else{
             setSrStep("loading");
-            axios.post("http://localhost:9000/sendmailresume/" + reqMail)
+            axios.post("https://gspf-backend.herokuapp.com/sendmailresume/" + reqMail)
             .then(response => {
                 if(response.data == "sent"){
                     console.log(response.data + " to " + reqMail);
@@ -117,7 +117,7 @@ function Layout() {
         }
         else{
             setSmStep("loading");
-            axios.post("http://localhost:9000/sendmailmessage", data)
+            axios.post("https://gspf-backend.herokuapp.com/sendmailmessage", data)
             .then(response => {
                 if(response.data == "sent"){
                     console.log(response.data);
