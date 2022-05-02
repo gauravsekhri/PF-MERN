@@ -478,7 +478,7 @@ div.p5leftbox > div > a > svg:hover{
     }
 
     .containermain {
-        padding: 10px;
+        padding: 0px;
     }
 
     .myname {
@@ -494,7 +494,7 @@ div.p5leftbox > div > a > svg:hover{
         width: -webkit-fill-available;
         padding: 10px 10px;
         min-height: 200px;
-        border: 0.5px solid #dadce0;
+        border: none;
     }
     
     .leftbox{
@@ -610,6 +610,7 @@ div.p5leftbox > div > a > svg:hover{
 
     .part4{
         padding: 10px 10px 0px 10px;
+        border: none;
     }
 
     .part4header{
@@ -687,6 +688,39 @@ div.p5leftbox > div > a > svg:hover{
     .srloader{
         min-width: -webkit-fill-available;
         width: -webkit-fill-available;
+    }
+
+    .container{
+        width: 100%;
+        padding: 0px 5px;
+    }
+
+    .row-cols-1>* {
+        flex: auto;
+        width: 50%;
+    }
+
+    .row>*{
+        padding: 0px 6px;
+        margin-top: 11px;
+    }
+
+    .card{
+        min-height: 240px;
+    }
+
+    .cardtitle{
+        font-size: 16px;
+    }
+
+    .card-body {
+        padding: 0.5rem 0.8rem 0rem 1rem;
+        font-size: 12px;
+    }
+
+    .part6{
+        margin: 10px 10px 10px 10px;
+        font-size: 0.9rem;
     }
 
 }
