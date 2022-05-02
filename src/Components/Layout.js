@@ -241,8 +241,9 @@ function Layout() {
                                         <div class="card-text">{x.body}</div>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="btn-group">
-                                            <Button variant="text">Text</Button>
-                                            <Button variant="text">Edit</Button>
+                                            {/* <Button variant="text">Github</Button> */}
+                                            {/* <Button variant="text">Edit</Button> */}
+                                            <a>Github</a>
                                             </div>
                                             <small class="text-muted"></small>
                                         </div>

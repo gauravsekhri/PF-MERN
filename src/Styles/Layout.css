@@ -676,7 +676,8 @@ div.p5leftbox > div > a > svg:hover{
 
     .p5rightbox{
         width: -webkit-fill-available;
-        box-shadow: -2px 4px 20px 1px #b59251;
+        /* box-shadow: -2px 4px 20px 1px #b59251; */
+        box-shadow: 1px -1px 14px 1px #b59251;
     }
 
     .contacttext{
@@ -701,21 +702,36 @@ div.p5leftbox > div > a > svg:hover{
     }
 
     .row>*{
-        padding: 0px 6px;
+        padding: 0px 4.5px;
         margin-top: 11px;
-    }
-
-    .card{
-        min-height: 240px;
     }
 
     .cardtitle{
         font-size: 16px;
+        min-height: 60px;
+    }
+
+    .card{
+        min-height: fit-content;
+    }
+
+    .card a {
+        margin-bottom: 15px;
+        border: 0.5px solid gray;
+        display: flex;
+        width: 100%;
+        border-radius: 5px;
+        padding: 2.5px 10px;
+        cursor: pointer;
     }
 
     .card-body {
         padding: 0.5rem 0.8rem 0rem 1rem;
         font-size: 12px;
+    }
+
+    .card-text {
+        min-height: 85px;
     }
 
     .part6{
