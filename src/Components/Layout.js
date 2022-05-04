@@ -15,7 +15,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Resume from "../Utility/Resume_GauravSekhri.pdf";
 import EmailIcon from '@mui/icons-material/Email';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import { EmailOutlined } from '@mui/icons-material';
+import { AirportShuttle, EmailOutlined } from '@mui/icons-material';
 import axios from 'axios';
 import CircularProgress from '@mui/material/CircularProgress';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
@@ -23,7 +23,7 @@ import Snackbar from '@mui/material/Snackbar';
 
 function Layout() {
 
-    const [currentTab, setCurrentTab] = useState(1);
+    const [currentTab, setCurrentTab] = useState(0);
 
     //Resume Mail Request Email
     const [reqMail, setReqMail] = useState("");
@@ -40,28 +40,84 @@ function Layout() {
 
     const[showToast, setShowToast] = useState(false);
 
+
     var jsProjects = [
         {
-            title: "Survey Builder App",
-            body: "Created a survey builder application using MERN stack. Aim is to build surveys on low cost."
+            title: "Survey Builder App - For Programmers",
+            body: "Created a survey builder application using MERN stack. Aim is to build surveys on low cost.",
+            glink : ""
         },
         {
-            title: "Whatsapp Clone Realtime",
-            body: "Developed the cart app for Whatsapp."
+            title: "Survey Client App - For Respondents",
+            body: "Created a survey builder application using MERN stack. Aim is to build surveys on low cost.",
+            glink : ""
         },
         {
-            title: "Amazon Cart App",
-            body: "Developed the cart app for Amazon."
+            title: "Whatsapp Clone - Realtime",
+            body: "Developed a clone of whatsapp. It can establish a chat environment between two users. Used Pusher for realtime actions.",
+            glink : ""
         },
         {
-            title: "Myntra Cart App",
-            body: "Developed the cart app for Myntra."
+            title: "Amazon Cart App - UI, JavaScript",
+            body: "Developed a clone of amazon cart. Used HTML, CSS and Javascript to achieve similar UI and functionality.",
+            glink : ""
         },
         {
-            title: "Myntra Cart App",
-            body: "Developed the cart app for Myntra."
+            title: "Myntra Cart App - UI, JavaScript",
+            body: "Developed a clone of myntra cart. Used HTML, CSS and Javascript to achieve similar UI and functionality.",
+            glink : ""
+        },
+        {
+            title: "Analog Clock Using JavaScript",
+            body: "Developed a real-time working analog clock using pure JavaScript. Time can be fetched using built-in time object in JavaScript.",
+            glink : ""
+        },
+        {
+            title: "Calculator Using JavaScript",
+            body: "Developed a real-time working calculator using pure JavaScript. Used built-in eval() function in JavaScript to compute results.",
+            glink : ""
+        },
+        {
+            title: "Unlimited Jokes API",
+            body: "Developed an app that is able to use API (application programming interface) to fetch unlimited jokes from icanhazdadjoke.com",
+            glink : ""
         }
     ]
+
+    var AIProjects = [
+        {
+            title: "Image Classification using CNN",
+            body: "Trained a CNN model using 200 images of car & plane each. The model is able to successively distinguish between them.",
+            glink : ""
+        },
+        {
+            title: "Face Detection using OpenCV (Python)",
+            body: "Used haarcascade xml file that helps in detecting the faces in any image. It can also detect multiple faces in an image.",
+            glink : ""
+        },
+        {
+            title: "Bengaluru House Price Prediction (Python)",
+            body: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+            glink : ""
+        },
+        {
+            title: "Boston House Price Prediction (Python)",
+            body: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+            glink : ""
+        },
+        {
+            title: "Diabetes Analysis and Prediction (Python)",
+            body: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+            glink : ""
+        },     
+        {
+            title: "Titanic Survival Prediction (Python)",
+            body: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+            glink : ""
+        },
+    ]
+
+    const[projectsList, setProjectsList] = useState(jsProjects);
 
     function downloadResume(){
         window.location.href = "http://localhost:3000/src/Utility/Resume_GauravSekhri.pdf";
@@ -192,15 +248,15 @@ function Layout() {
                 <div className='part4header'>Projects</div>
                 <div className='currcategory'>
                     <ul class="nav nav-pills">
-                        <li class="nav-item" onClick={() => setCurrentTab(0)}>
+                        <li class="nav-item" onClick={() => {setCurrentTab(0); setProjectsList(jsProjects);}}>
                             <a className={currentTab == 0 ? "nav-link active" : "nav-link"}>JavaScript</a>
                         </li>
-                        <li class="nav-item" onClick={() => setCurrentTab(1)}>
+                        <li class="nav-item" onClick={() => {setCurrentTab(1); setProjectsList(AIProjects);}}>
                             <a className={currentTab == 1 ? "nav-link active" : "nav-link"}>AI/ML</a>
                         </li>
-                        <li class="nav-item" onClick={() => setCurrentTab(2)}>
+                        {/* <li class="nav-item" onClick={() => setCurrentTab(2)}>
                             <a className={currentTab == 2 ? "nav-link active" : "nav-link"}>Other</a>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 <div className='projectscontainer'>
@@ -232,25 +288,57 @@ function Layout() {
                     <div class="album py-5">
                         <div class="container">
                             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                {jsProjects.map((x,i) => (
-                                <div class="col" key={i}>
-                                    <div class="card shadow-sm">
-                                        {/* <svg class="bd-placeholder-img card-img-top" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg> */}
-                                        <div className='cardtitle'>{x.title}</div>
-                                        <div class="card-body">
-                                        <div class="card-text">{x.body}</div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group">
-                                            {/* <Button variant="text">Github</Button> */}
-                                            {/* <Button variant="text">Edit</Button> */}
-                                            <a>Github</a>
+                                {window.screen.width > 800 ? 
+                                    <>
+                                        {projectsList.map((x,i) => (
+                                        <div class="col" key={i}>
+                                            <div class="card shadow-sm">
+                                                {/* <svg class="bd-placeholder-img card-img-top" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg> */}
+                                                <div className='cardtitle'>{x.title}</div>
+                                                <div class="card-body">
+                                                <div class="card-text">{x.body}</div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="btn-group">
+                                                    {/* <Button variant="text">Github</Button> */}
+                                                    {/* <Button variant="text">Edit</Button> */}
+                                                    <a>Github</a>
+                                                    </div>
+                                                    <small class="text-muted"></small>
+                                                </div>
+                                                </div>
                                             </div>
-                                            <small class="text-muted"></small>
                                         </div>
+                                        ))}
+                                        <div class="col">
+                                            <div class="loadmorecard">
+                                                <div className='loadmore'>{"Load More =>"}</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                ))}
+                                    </>
+                                    :
+                                    <>
+                                        {projectsList.slice(0,4).map((x,i) => (
+                                        <div class="col" key={i}>
+                                            <div class="card shadow-sm">
+                                                {/* <svg class="bd-placeholder-img card-img-top" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg> */}
+                                                <div className='cardtitle'>{x.title}</div>
+                                                <div class="card-body">
+                                                <div class="card-text">{x.body}</div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="btn-group">
+                                                    {/* <Button variant="text">Github</Button> */}
+                                                    {/* <Button variant="text">Edit</Button> */}
+                                                    <a>Github</a>
+                                                    </div>
+                                                    <small class="text-muted"></small>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        ))}
+                                        <div className='loadmore'>{"Load More =>"}</div>
+                                    </>
+                                }
                             </div>
                         </div>
                     </div>

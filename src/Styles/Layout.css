@@ -271,7 +271,7 @@ a{
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
-    width: 275px;
+    width: 225px;
     justify-content: space-between;
     font-weight: 700;
     color: #0a57ca7a;
@@ -310,6 +310,27 @@ a{
     min-height: 215px;
 }
 
+.loadmorecard{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: none;
+    border-radius: 0.25rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    min-height: 215px;
+    font-style: italic;
+}
+
+.loadmore{
+    cursor: pointer;
+}
+
 @media (min-width: 768px){
     .row-cols-md-3>* {
         flex: 0 0 auto;
@@ -326,6 +347,21 @@ a{
     font-size: 22px;
     font-weight: 700;
     padding: 10px 15px;
+    min-height: 96px;
+}
+
+.card a {
+    margin-bottom: 15px;
+    border: 0.5px solid gray;
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    padding: 2.5px 10px;
+    cursor: pointer;
+}
+
+.card-text{
+    min-height: 76px;
 }
 
 .p5boxxontainer{
@@ -611,6 +647,7 @@ div.p5leftbox > div > a > svg:hover{
     .part4{
         padding: 10px 10px 0px 10px;
         border: none;
+        margin: 20px 0px 0px 0px;
     }
 
     .part4header{
@@ -626,12 +663,12 @@ div.p5leftbox > div > a > svg:hover{
     }
 
     .py-5{
-        padding-bottom: 24px;
+        padding-bottom: 0px !important;
     }
 
     .nav{
         width: -webkit-fill-available;
-        padding: 0px 25px;
+        padding: 0px 56px;
     }
 
     .part5{
@@ -745,6 +782,14 @@ div.p5leftbox > div > a > svg:hover{
 
     .msgError{
         font-size: 13px;
+    }
+
+    .loadmore{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 33px 0px 50px 0px;
+        font-style: italic;
     }
 
 }
