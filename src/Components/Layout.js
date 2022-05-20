@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import GetAppSharpIcon from '@mui/icons-material/GetAppSharp';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import Resume from "../Utility/Resume_GauravSekhri.pdf";
+import Resume from "../Utility/Resume_Gaurav_Sekhri.pdf";
 import EmailIcon from '@mui/icons-material/Email';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { AirportShuttle, EmailOutlined } from '@mui/icons-material';
@@ -45,42 +45,58 @@ function Layout() {
         {
             title: "Survey Builder App - For Programmers",
             body: "Created a survey builder application using MERN stack. Aim is to build surveys on low cost.",
-            glink : ""
+            tech: "React, Material UI, Node Js, Express, SQL",
+            glink : "",
+            personalproject : false
         },
         {
             title: "Survey Client App - For Respondents",
             body: "Created a survey builder application using MERN stack. Aim is to build surveys on low cost.",
-            glink : ""
+            tech: "React, Material UI, Node Js, Express, SQL",
+            glink : "",
+            personalproject : false
         },
         {
             title: "Whatsapp Clone - Realtime",
             body: "Developed a clone of whatsapp. It can establish a chat environment between two users. Used Pusher for realtime actions.",
-            glink : ""
+            tech: "React, Material UI, Node Js, Express, MongoDb",
+            glink : "",
+            personalproject : true
         },
         {
             title: "Amazon Cart App - UI, JavaScript",
             body: "Developed a clone of amazon cart. Used HTML, CSS and Javascript to achieve similar UI and functionality.",
-            glink : ""
+            tech: "HTML, CSS, Javascript, Bootstrap",
+            glink : "",
+            personalproject : true
         },
         {
             title: "Myntra Cart App - UI, JavaScript",
             body: "Developed a clone of myntra cart. Used HTML, CSS and Javascript to achieve similar UI and functionality.",
-            glink : ""
+            tech: "HTML, CSS, Javascript, Bootstrap",
+            glink : "",
+            personalproject : true
         },
         {
             title: "Analog Clock Using JavaScript",
             body: "Developed a real-time working analog clock using pure JavaScript. Time can be fetched using built-in time object in JavaScript.",
-            glink : ""
+            tech: "HTML, CSS, Javascript",
+            glink : "",
+            personalproject : true
         },
         {
             title: "Calculator Using JavaScript",
             body: "Developed a real-time working calculator using pure JavaScript. Used built-in eval() function in JavaScript to compute results.",
-            glink : ""
+            tech: "HTML, CSS, Javascript",
+            glink : "",
+            personalproject : true
         },
         {
             title: "Unlimited Jokes API",
             body: "Developed an app that is able to use API (application programming interface) to fetch unlimited jokes from icanhazdadjoke.com",
-            glink : ""
+            tech: "HTML, CSS, Javascript",
+            glink : "",
+            personalproject : true
         }
     ]
 
@@ -88,32 +104,44 @@ function Layout() {
         {
             title: "Image Classification using CNN",
             body: "Trained a CNN model using 200 images of car & plane each. The model is able to successively distinguish between them.",
-            glink : ""
+            tech: "Deep Learning, Python",
+            glink : "",
+            personalproject : true
         },
         {
             title: "Face Detection using OpenCV (Python)",
             body: "Used haarcascade xml file that helps in detecting the faces in any image. It can also detect multiple faces in an image.",
-            glink : ""
+            tech: "OpenCV, Python",
+            glink : "",
+            personalproject : true
         },
         {
             title: "Bengaluru House Price Prediction (Python)",
             body: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-            glink : ""
+            tech: "Machine Learning, Python",
+            glink : "",
+            personalproject : true
         },
         {
             title: "Boston House Price Prediction (Python)",
             body: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-            glink : ""
+            tech: "Machine Learning, Python",
+            glink : "",
+            personalproject : true
         },
         {
             title: "Diabetes Analysis and Prediction (Python)",
             body: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-            glink : ""
+            tech: "Machine Learning, Python",
+            glink : "",
+            personalproject : true
         },     
         {
             title: "Titanic Survival Prediction (Python)",
             body: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
-            glink : ""
+            tech: "Machine Learning, Python",
+            glink : "",
+            personalproject : true
         },
     ]
 
@@ -210,7 +238,7 @@ function Layout() {
                     <div className='rightbox'>
                         <div className='abtheader'>About Me</div>
                         <div className='abtText'>
-                            Hi I am Gaurav Sekhri, a 23 year old Developer living in New Delhi, India. I am a Computer Science Engineer, currently working at Excavate Research.
+                            Hi I am Gaurav Sekhri, a 23 year old Developer living in New Delhi, India. I am a Computer Science Engineer, currently working at Excavate Research as a Programmer.
                             
                         </div>
                     </div>
@@ -220,7 +248,7 @@ function Layout() {
             <div className='part3'>
                 <div className='part3header'>Resume</div>
                 <div className='resumebtnscont'>
-                    <a href={Resume} download="MyExampleDoc" target='_blank' className='dwnldA'>
+                    <a href={Resume} download="Resume_Gaurav_Sekhri" target='_blank' className='dwnldA'>
                         <button className='downloadresumebtn'><GetAppSharpIcon/> Download Resume</button>
                     </a>
                     <div className='middle'>OR</div>
@@ -297,11 +325,16 @@ function Layout() {
                                                 <div className='cardtitle'>{x.title}</div>
                                                 <div class="card-body">
                                                 <div class="card-text">{x.body}</div>
-                                                <div class="d-flex justify-content-between align-items-center">
+                                                <div className='techstack'>Tech : {x.tech}</div>
+                                                <div class="">
                                                     <div class="btn-group">
                                                     {/* <Button variant="text">Github</Button> */}
                                                     {/* <Button variant="text">Edit</Button> */}
-                                                    <a>Github</a>
+                                                    {x.personalproject == true ? 
+                                                        <a href={x.glink}>Github</a>
+                                                        :
+                                                        <a>Company Project</a>
+                                                    }
                                                     </div>
                                                     <small class="text-muted"></small>
                                                 </div>
@@ -309,11 +342,11 @@ function Layout() {
                                             </div>
                                         </div>
                                         ))}
-                                        <div class="col">
+                                        {/* <div class="col">
                                             <div class="loadmorecard">
                                                 <div className='loadmore'>{"Load More =>"}</div>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </>
                                     :
                                     <>
@@ -328,7 +361,7 @@ function Layout() {
                                                     <div class="btn-group">
                                                     {/* <Button variant="text">Github</Button> */}
                                                     {/* <Button variant="text">Edit</Button> */}
-                                                    <a>Github</a>
+                                                    <a href={x.glink}>Github</a>
                                                     </div>
                                                     <small class="text-muted"></small>
                                                 </div>
@@ -336,7 +369,7 @@ function Layout() {
                                             </div>
                                         </div>
                                         ))}
-                                        <div className='loadmore'>{"Load More =>"}</div>
+                                        {/* <div className='loadmore'>{"Load More =>"}</div> */}
                                     </>
                                 }
                             </div>

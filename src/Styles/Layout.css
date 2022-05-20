@@ -341,6 +341,7 @@ a{
 .card-body{
     padding: 0.5rem 1rem;
     font-size: 12px;
+    color: #888;
 }
 
 .cardtitle{
@@ -360,8 +361,23 @@ a{
     cursor: pointer;
 }
 
+.card:hover{
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.696)!important;
+}
+
+.card:hover .card-body{
+    color: #000;
+}
+
 .card-text{
     min-height: 76px;
+}
+
+.techstack{
+    margin-bottom: 18px;
+    font-style: italic;
+    font-size: 12.5px;
+    min-height: 37.5px;
 }
 
 .p5boxxontainer{
