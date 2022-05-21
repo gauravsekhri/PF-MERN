@@ -746,7 +746,7 @@ div.p5leftbox > div > a > svg:hover{
 
     .container{
         width: 100%;
-        padding: 0px 5px;
+        padding: 0px 0px;
     }
 
     .row-cols-1>* {
@@ -760,7 +760,7 @@ div.p5leftbox > div > a > svg:hover{
     }
 
     .cardtitle{
-        font-size: 16px;
+        font-size: 13px;
         min-height: 60px;
     }
 
@@ -779,12 +779,20 @@ div.p5leftbox > div > a > svg:hover{
     }
 
     .card-body {
-        padding: 0.5rem 0.8rem 0rem 1rem;
-        font-size: 12px;
+        padding: 0.5rem 0.8rem 0rem 0.8rem;
+        font-size: 11px;
     }
 
     .card-text {
         min-height: 105px;
+    }
+
+    .techstack{
+        font-size: 10.5px;
+        min-height: 49px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15.5px;
     }
 
     .part6{

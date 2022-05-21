@@ -64,28 +64,28 @@ function Layout() {
             personalproject : true
         },
         {
-            title: "Amazon Cart App - UI, JavaScript",
+            title: "Amazon Cart UI",
             body: "Developed a clone of amazon cart. Used HTML, CSS and Javascript to achieve similar UI and functionality.",
             tech: "HTML, CSS, Javascript, Bootstrap",
             glink : "",
             personalproject : true
         },
         {
-            title: "Myntra Cart App - UI, JavaScript",
+            title: "Myntra Cart UI",
             body: "Developed a clone of myntra cart. Used HTML, CSS and Javascript to achieve similar UI and functionality.",
             tech: "HTML, CSS, Javascript, Bootstrap",
             glink : "",
             personalproject : true
         },
         {
-            title: "Analog Clock Using JavaScript",
+            title: "Analog Clock",
             body: "Developed a real-time working analog clock using pure JavaScript. Time can be fetched using built-in time object in JavaScript.",
             tech: "HTML, CSS, Javascript",
             glink : "",
             personalproject : true
         },
         {
-            title: "Calculator Using JavaScript",
+            title: "Calculator",
             body: "Developed a real-time working calculator using pure JavaScript. Used built-in eval() function in JavaScript to compute results.",
             tech: "HTML, CSS, Javascript",
             glink : "",
@@ -288,41 +288,17 @@ function Layout() {
                     </ul>
                 </div>
                 <div className='projectscontainer'>
-                    {[].map(x => (
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="/static/images/cards/contemplative-reptile.jpg"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                Lizard
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Button size="small">Share</Button>
-                                <Button size="small">Learn More</Button>
-                            </CardActions>
-                        </Card>
-                    ))}
-
-
                     <div class="album py-5">
                         <div class="container">
                             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                                {window.screen.width > 800 ? 
+                                {/* {window.screen.width > 800 ?  */}
+                                {true ? 
                                     <>
                                         {projectsList.map((x,i) => (
                                         <div class="col" key={i}>
                                             <div class="card shadow-sm">
                                                 {/* <svg class="bd-placeholder-img card-img-top" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg> */}
-                                                <div className='cardtitle'>{x.title}</div>
+                                                <div className='cardtitle' style={projectsList.length < 7 ? {'min-height' : '78px'} : {'min-height' : '60px'} }>{x.title}</div>
                                                 <div class="card-body">
                                                 <div class="card-text">{x.body}</div>
                                                 <div className='techstack'>Tech : {x.tech}</div>
