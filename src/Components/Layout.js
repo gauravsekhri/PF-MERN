@@ -44,14 +44,14 @@ function Layout() {
     var jsProjects = [
         {
             title: "Survey Builder App - For Programmers",
-            body: "Created a survey builder application using MERN stack. Aim is to build surveys on low cost.",
+            body: "Created a survey builder application. The aim is to build surveys at low cost. It has the ability to build surveys with complex logics.",
             tech: "React, Material UI, Node Js, Express, SQL",
             glink : "",
             personalproject : false
         },
         {
             title: "Survey Client App - For Respondents",
-            body: "Created a survey builder application using MERN stack. Aim is to build surveys on low cost.",
+            body: "Created a survey app for data collection. It is used by respondents to enter their responses. Added skip logics, quotas, etc.",
             tech: "React, Material UI, Node Js, Express, SQL",
             glink : "",
             personalproject : false
@@ -78,14 +78,14 @@ function Layout() {
             personalproject : true
         },
         {
-            title: "Analog Clock",
+            title: "Analog Clock using Javascript",
             body: "Developed a real-time working analog clock using pure JavaScript. Time can be fetched using built-in time object in JavaScript.",
             tech: "HTML, CSS, Javascript",
             glink : "",
             personalproject : true
         },
         {
-            title: "Calculator",
+            title: "Calculator using Javascript",
             body: "Developed a real-time working calculator using pure JavaScript. Used built-in eval() function in JavaScript to compute results.",
             tech: "HTML, CSS, Javascript",
             glink : "",
@@ -93,7 +93,7 @@ function Layout() {
         },
         {
             title: "Unlimited Jokes API",
-            body: "Developed an app that is able to use API (application programming interface) to fetch unlimited jokes from icanhazdadjoke.com",
+            body: "Developed an app that is able to use API to fetch unlimited jokes from icanhazdadjoke.com",
             tech: "HTML, CSS, Javascript",
             glink : "",
             personalproject : true
