@@ -60,42 +60,42 @@ function Layout() {
             title: "Whatsapp Clone - Realtime",
             body: "Developed a clone of whatsapp. It can establish a chat environment between two users. Used Pusher for realtime actions.",
             tech: "React, Material UI, Node Js, Express, MongoDb",
-            glink : "",
+            glink : "https://github.com/gauravsekhri/Whatsapp-MERN-Realtime",
             personalproject : true
         },
         {
             title: "Amazon Cart UI",
             body: "Developed a clone of amazon cart. Used HTML, CSS and Javascript to achieve similar UI and functionality.",
             tech: "HTML, CSS, Javascript, Bootstrap",
-            glink : "",
+            glink : "https://github.com/gauravsekhri/JavaScript-Projects",
             personalproject : true
         },
         {
             title: "Myntra Cart UI",
             body: "Developed a clone of myntra cart. Used HTML, CSS and Javascript to achieve similar UI and functionality.",
             tech: "HTML, CSS, Javascript, Bootstrap",
-            glink : "",
+            glink : "https://github.com/gauravsekhri/JavaScript-Projects",
             personalproject : true
         },
         {
             title: "Analog Clock using Javascript",
             body: "Developed a real-time working analog clock using pure JavaScript. Time can be fetched using built-in time object in JavaScript.",
             tech: "HTML, CSS, Javascript",
-            glink : "",
+            glink : "https://github.com/gauravsekhri/JavaScript-Projects",
             personalproject : true
         },
         {
             title: "Calculator using Javascript",
             body: "Developed a real-time working calculator using pure JavaScript. Used built-in eval() function in JavaScript to compute results.",
             tech: "HTML, CSS, Javascript",
-            glink : "",
+            glink : "https://github.com/gauravsekhri/JavaScript-Projects",
             personalproject : true
         },
         {
             title: "Unlimited Jokes API",
-            body: "Developed an app that is able to use API to fetch unlimited jokes from icanhazdadjoke.com",
+            body: "Developed an app that is able to use API to fetch unlimited jokes. Random jokes are fetched from API.",
             tech: "HTML, CSS, Javascript",
-            glink : "",
+            glink : "https://github.com/gauravsekhri/JavaScript-Projects",
             personalproject : true
         }
     ]
@@ -105,42 +105,42 @@ function Layout() {
             title: "Image Classification using CNN",
             body: "Trained a CNN model using 200 images of car & plane each. The model is able to successively distinguish between them.",
             tech: "Deep Learning, Python",
-            glink : "",
+            glink : "https://github.com/gauravsekhri/Image-Classification-Using-CNN",
             personalproject : true
         },
         {
             title: "Face Detection using OpenCV (Python)",
-            body: "Used haarcascade xml file that helps in detecting the faces in any image. It can also detect multiple faces in an image.",
+            body: "Used haarcascade xml file that helps in detecting the faces in any colored image. It can also detect multiple faces in an image.",
             tech: "OpenCV, Python",
-            glink : "",
+            glink : "https://github.com/gauravsekhri/Face-Detection-using-OpenCV",
             personalproject : true
         },
         {
             title: "Bengaluru House Price Prediction (Python)",
-            body: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+            body: "An AI model that can predict the price of a house in Bengaluru. It can predict the price of an house based on the desired number of BHK and area.",
             tech: "Machine Learning, Python",
-            glink : "",
+            glink : "https://github.com/gauravsekhri/Bengaluru-House-Price-Prediction",
             personalproject : true
         },
         {
             title: "Boston House Price Prediction (Python)",
-            body: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+            body: "An AI model that predicts the price of houses in Boston. Evaluated the scores using Linear Regression, Decision Tree and Random Forest Regression.",
             tech: "Machine Learning, Python",
-            glink : "",
+            glink : "https://github.com/gauravsekhri/Boston-House-Price-Prediction",
             personalproject : true
         },
         {
             title: "Diabetes Analysis and Prediction (Python)",
-            body: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+            body: "An AI model that predicts the existance of Diabetes in Indian Females. Used regression & classification algorithms to achieve maximum accuracy.",
             tech: "Machine Learning, Python",
-            glink : "",
+            glink : "https://github.com/gauravsekhri/Diabetes-Analysis-and-Prediction",
             personalproject : true
         },     
         {
             title: "Titanic Survival Prediction (Python)",
-            body: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+            body: "Prediction on the survival of passengers of titanic ship. The highest accuracy was delivered by Random Forest (84.27%).",
             tech: "Machine Learning, Python",
-            glink : "",
+            glink : "https://github.com/gauravsekhri/Titanic-Survival-Prediction",
             personalproject : true
         },
     ]
@@ -227,7 +227,7 @@ function Layout() {
                     <img src={logo} className="App-logo" alt="logo" />
                 </div>
                 <div className='myname'>Gaurav Sekhri</div>
-                <div className='coffeebtncontainer'><a href='http://localhost:3000/#contactme' className='coffeebtn'>Coffee with me</a></div>
+                <div className='coffeebtncontainer'><a href='#contactme' className='coffeebtn'>Coffee with me</a></div>
             </div>
 
             <div className='part2'>
@@ -298,7 +298,7 @@ function Layout() {
                                         <div class="col" key={i}>
                                             <div class="card shadow-sm">
                                                 {/* <svg class="bd-placeholder-img card-img-top" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg> */}
-                                                <div className='cardtitle' style={projectsList.length < 7 ? {'min-height' : '78px'} : {'min-height' : '60px'} }>{x.title}</div>
+                                                <div className='cardtitle' style={projectsList.length < 7 ? window.screen.width > 800 ? {'min-height' : '95px'} : {'min-height' : '76px'} : window.screen.width > 800 ? {'min-height' : '86px'} : {'min-height' : '60px'} }>{x.title}</div>
                                                 <div class="card-body">
                                                 <div class="card-text">{x.body}</div>
                                                 <div className='techstack'>Tech : {x.tech}</div>
